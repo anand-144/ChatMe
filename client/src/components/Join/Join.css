@@ -1,0 +1,105 @@
+html, body {
+    font-family: "Quicksand", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.helping-hands-icon {
+    color: #537895; 
+    font-size: 24px; 
+}
+
+.SignIn {
+    font-size: 20px; /* Adjust the font size as needed */
+    vertical-align: bottom;
+}
+
+.EnteringIcon{
+    font-size: 20px;
+    vertical-align: bottom;
+}
+
+
+.joinOuterContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #09203F , #537895);
+    height: 100vh;
+}
+
+
+.joinInnerContainer {
+    width: auto; 
+    background-color: #fff; 
+    border-radius: 10px; 
+    padding: 40px; 
+    box-shadow: 20px 20px 60px #0000005b; 
+}
+
+.joinInput {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px 30px;
+    width: 100%;
+    margin-bottom: 20px; 
+    color: #09203F;
+}
+
+.joinInput:focus {
+    outline: none; 
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3); 
+}
+
+.heading {
+    color: #09203F; 
+    font-size: 2em;
+    margin-bottom: 20px; 
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+}
+
+
+
+
+.button {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background:  #09203F;
+    padding: 15px; 
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    width: 100%;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #537895; 
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .joinInnerContainer {
+        width: 90%; 
+    }
+}
