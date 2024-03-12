@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { FaHandsHelping } from 'react-icons/fa';
-import { LiaSignInAltSolid } from "react-icons/lia";
+import { FaHandsHelping, FaSignInAlt } from 'react-icons/fa';
 import { PiChatCenteredDotsThin } from "react-icons/pi";
 import './Join.css';
 
@@ -10,26 +9,20 @@ const Join = () => {
     const [signingIn, setSigningIn] = useState(false);
 
     const handleSignIn = () => {
-        if (!name || !room) {
+        if (!name.trim() || !room.trim()) {
             alert('Please fill in all fields.');
             return;
         }
-
-        // Check if the name contains at least three letters and one emoji
-        if (name.length < 3 || !containsEmoji(name)) {
-            alert('Name should contain at least three letters and one emoji.');
+    
+        if (name.trim().length < 3) {
+            alert('Name should contain at least three letters.');
             return;
         }
-
+    
         setSigningIn(true);
         setTimeout(() => {
             window.location.href = `/chat?name=${name}&room=${room}`;
         }, 1000);
-    };
-
-    const containsEmoji = (str) => {
-        const emojiPattern = /[\u{1F300}-\u{1FAD6}]/u;
-        return emojiPattern.test(str);
     };
 
     return (
@@ -37,9 +30,9 @@ const Join = () => {
             <div className='joinInnerContainer'>
                 <h1 className='heading'> Join <FaHandsHelping className="helping-hands-icon" /></h1>
                 <div><input placeholder='Name' className='joinInput' type='text' onChange={(event) => setName(event.target.value)} /></div>
-                <div><input placeholder='Enter Room Number' className='joinInput mt-20' type='number' onChange={(event) => setRoom(event.target.value)} /></div>
+                <div><input placeholder='Room' className='joinInput mt-20' type='text' onChange={(event) => setRoom(event.target.value)} /></div>
                 <button className='button mt-20' type='button' onClick={handleSignIn}>
-                    {signingIn ? 'Entering' : 'Sign In'} {signingIn ? <PiChatCenteredDotsThin className='EnteringIcon' /> : <LiaSignInAltSolid className='SignIn' />}
+                    {signingIn ? 'Entering' : 'Sign In'} {signingIn ? <PiChatCenteredDotsThin className='EnteringIcon' /> : <FaSignInAlt className='SignIn' />}
                 </button>
             </div>
         </div>

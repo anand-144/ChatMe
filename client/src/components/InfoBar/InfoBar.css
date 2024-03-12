@@ -1,0 +1,42 @@
+.infoBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #3d40f33d;
+    border-radius: 4px 4px 0 0;
+    height: 60px;
+    width: 100%;
+  }
+  
+  .leftInnerContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    color: white;
+  }
+  
+  .onlineIcon {
+    margin-right: 5%;
+  }
+  
+  .roomText {
+    margin-left: 1rem; /* Reset margin */
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: rgba(182, 77, 243, 0.719);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .rightInnerContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+  }
+  
+
+  .customButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* Add more styles as needed */
+}
